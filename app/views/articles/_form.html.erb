@@ -7,18 +7,30 @@
   </ul>
 <% end %>
 
-<%= form_for @article do |a| %>
-  <p>
-    <%= a.label :title %><br>
-    <%= a.text_field :title %>
-  </p>
-  <p>
-    <%= a.label :description %><br>
-    <%= a.text_area :description %>
-  </p>
-  <p>
-    <%= a.submit %>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for @article do |a| %>
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"><%= a.label :title %></label>
+        <div class="col-md-10">
+          <%= a.text_field :title, class: "form-control",  placeholder: "Title of the Article" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"><%= a.label :description %></label>
+        <div class="col-md-10">
+          <%= a.text_area :description, class: "form-control", placeholder: "Description of the Article", rows: "10" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-md-2 col-md-10">
+          <%= a.submit class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
 
-<%= link_to "Back to articles listing", articles_path %>
+    <div class="offset-md-4 col-md-4">
+      [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+    </div>
+  </div>
+</div>
