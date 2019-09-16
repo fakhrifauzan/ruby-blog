@@ -1,52 +1,56 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
-#logo{
+#logo {
   color: white;
   font-weight: bold;
 }
 
-.center{
+.center {
   text-align: center;
 }
 
-.article-title{
+.article-title {
   font-weight: bold;
   font-size: 1.25em;
 }
 
-.article-body{
+.article-body {
   border-top: 1px solid #eaeaea;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-.article-actions{
+.article-meta-details {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+.article-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 5px;
 }
 
-footer{
+footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
 }
 
-footer a:hover{
+footer a:hover {
   color: #222;
 }
 
-footer small{
+footer small {
   float: left;
 }
 
-footer ul{
+footer ul {
   float: right;
   list-style: none;
 }
 
-footer ul li{
+footer ul li {
   float: left;
   margin-left: 15px;
 }
