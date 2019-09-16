@@ -16,5 +16,11 @@
       <%= yield %>
     </main>
     <%= render 'layouts/footer' %>
+    <br>
+    <div class="container" style="background-color: #eaeaea">
+      <div class="offset-md-2 col-md-8">
+        <p><%= debug(params) if Rails.env.development? %></p>
+      </div>
+    </div>
   </body>
 </html>
