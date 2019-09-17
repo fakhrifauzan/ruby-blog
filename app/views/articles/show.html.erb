@@ -1,6 +1,24 @@
 <h3 class="text-center"><%= @article.title %></h3>
 <div class="card bg-light">
   <div class="card-body">
+    <% if @article.user %>
+      <ul class="listing center">
+        <li>
+          Created by : 
+        </li> 
+        <li>
+          <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+        </li> 
+        <li class="article-title">
+          <%= link_to @article.user.username, user_path(@article.user) %>
+        </li>
+        <li>
+          <small>
+            <%= pluralize(@article.user.articles.count, "article") if @article.user.articles %>
+          </small>
+        </li>
+      </ul>
+    <% end %>
     <p class="card-text"><%= simple_format(@article.description) %></p>
     <%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-warning" %>
     <%= link_to "Delete this article", article_path(@article), method: :delete, data: { confirm: "Are you sure want to delete this article?" }, class: "btn btn-danger" %>
