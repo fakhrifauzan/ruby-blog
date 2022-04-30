@@ -43,4 +43,9 @@ heroku git:remote -a fazan-ruby-basic
 git push heroku master
 ```
 
+Migrate if there's a new schema
+```
+heroku run rake db:migrate db:seed
+```
+
 * ...
