@@ -1,46 +1,32 @@
-# 
-# Install the MYSQL driver
-#   gem install mysql2
-#
-# Ensure the MySQL gem is defined in your Gemfile
-#   gem 'mysql2'
-#
-# And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
-
 development:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: true
   database: ruby_basic_development
-  host: 127.0.0.1
-  port: 3306
+  host: localhost
+  port: 5432
   pool: 5
-  username: root
+  username: postgres
   password: sqlsecret
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-
 test:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: true
   database: ruby_basic_test
-  host: 127.0.0.1
-  port: 3306
+  host: localhost
+  port: 5432
   pool: 5
-  username: root
+  username: postgres
   password: sqlsecret
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: true
   database: ruby_basic_production
   host: localhost
-  port: 3306
+  port: 5432
   pool: 5
-  username: root
+  username: postgres
   password:

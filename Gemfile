@@ -45,8 +45,8 @@ group :development, :test do
 end
 
 group :development do
-  # Use mysql2 as the database for Active Record
-  gem 'mysql2'
+  # Use pg as the database for Active Record
+  gem 'pg'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -64,7 +64,7 @@ group :test do
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
   gem 'rails_12factor'
 end
 
