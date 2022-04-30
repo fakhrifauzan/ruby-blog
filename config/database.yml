@@ -11,12 +11,13 @@
 development:
   adapter: mysql2
   encoding: utf8
-  reconnect: false
+  reconnect: true
   database: ruby_basic_development
+  host: localhost
+  port: 3306
   pool: 5
   username: root
   password: sqlsecret
-  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,19 +26,21 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  reconnect: false
+  reconnect: true
   database: ruby_basic_test
+  host: localhost
+  port: 3306
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql2
   encoding: utf8
-  reconnect: false
+  reconnect: true
   database: ruby_basic_production
+  host: localhost
+  port: 3306
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
