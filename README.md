@@ -48,4 +48,8 @@ Migrate if there's a new schema
 heroku run rake db:migrate db:seed
 ```
 
-* ...
+* Others
+1. Using scaffold to made simple API
+```
+rails g scaffold API::V1::Movie id:primary_key genres:string adult:boolean language:string overview:string popularity:float release_date:date status:string title:string --api --pretend
+```
