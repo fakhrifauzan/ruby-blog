@@ -7,13 +7,29 @@ Things you may want to cover:
 
 * Ruby version
 
+2.6.3
+
 * System dependencies
+
+1. Ruby 2.6.3
+2. Bundler 2.0.2
+3. Postgre SQL
 
 * Configuration
 
+Please update database config on `config/database.yml`
+
 * Database creation
 
+```
+bundle exec rake db:create
+```
+
 * Database initialization
+
+```
+bundle exec rake db:migrate
+```
 
 * How to run the test suite
 
@@ -21,4 +37,19 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+```
+heroku login
+heroku git:remote -a fazan-ruby-basic
+git push heroku master
+```
+
+Migrate if there's a new schema
+```
+heroku run rake db:migrate db:seed
+```
+
+* Others
+1. Using scaffold to made simple API
+```
+rails g scaffold API::V1::Movie id:primary_key genres:string adult:boolean language:string overview:string popularity:float release_date:date status:string title:string --api --pretend
+```
